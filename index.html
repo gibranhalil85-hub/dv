@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -6,6 +7,7 @@
 <title>Video Collection</title>
 
 <style>
+
 *{
     box-sizing:border-box;
 }
@@ -18,10 +20,31 @@ body{
     padding:20px;
 }
 
+/* Countdown Full Screen */
+#loading-screen{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+#countdown{
+    font-size:120px;
+    font-weight:bold;
+    color:#ff0033;
+}
+
+/* Gallery */
 .container{
     max-width:1400px;
     margin:auto;
-    display:grid;
+    display:none;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:25px;
 }
@@ -34,15 +57,8 @@ body{
     border:1px solid #222;
 }
 
-.count{
-    font-size:60px;
-    color:#ff0033;
-    font-weight:bold;
-    margin:20px 0;
-}
-
 .cta-btn{
-    display:none;
+    display:flex;
     flex-direction:column;
     align-items:center;
     text-decoration:none;
@@ -54,7 +70,7 @@ body{
     border-radius:12px;
     margin-bottom:15px;
     box-shadow:0 0 20px rgba(255,255,255,.15);
-    transition:0.3s;
+    transition:.3s;
 }
 
 .cta-btn:hover img{
@@ -79,152 +95,157 @@ body{
     color:#aaa;
     font-size:13px;
 }
+
+@media(max-width:768px){
+    .container{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+    }
+
+    #countdown{
+        font-size:90px;
+    }
+
+    .watch-btn{
+        font-size:16px;
+    }
+}
+
 </style>
+
 </head>
+
 <body>
 
-<div class="container">
+<!-- Countdown -->
 
-    <!-- BOX 1 -->
-    <div class="box">
-        <div class="count">5</div>
+<div id="loading-screen">
+    <div id="countdown">5</div>
+</div>
 
-        <a href="https://masterpiece27.github.io/foundyourgirl/?v=0Ej0nifW1.mp4"
-           class="cta-btn"
-           target="_blank">
+<!-- Gallery -->
 
-            <img src="https://ik.imagekit.io/9skj9ruuwg/background_fullscreen_18plus.jpg?updatedAt=1777384412875">
+<div class="container" id="gallery">
 
-            <div class="watch-btn">
-                🎥 WATCH VIDEO
-            </div>
+```
+<!-- BOX 1 -->
+<div class="box">
+    <a href="https://masterpiece27.github.io/foundyourgirl/?v=0Ej0nifW1.mp4"
+       class="cta-btn"
+       target="_blank">
 
-        </a>
+        <img src="https://ik.imagekit.io/9skj9ruuwg/background_fullscreen_18plus.jpg?updatedAt=1777384412875">
 
-        <div class="note">Video may take a moment to load.</div>
-    </div>
+        <div class="watch-btn">🎥 WATCH VIDEO</div>
 
-    <!-- BOX 2 -->
-    <div class="box">
-        <div class="count">5</div>
+    </a>
 
-        <a href="https://masterpiece27.github.io/foundyourgirl/?v=0Ej0nifW1.mp4"
-           class="cta-btn"
-           target="_blank">
+    <div class="note">Video may take a moment to load.</div>
+</div>
 
-            <img src="https://ik.imagekit.io/9skj9ruuwg/background_fullscreen_18plus.jpg?updatedAt=1777384412875">
+<!-- BOX 2 -->
+<div class="box">
+    <a href="https://masterpiece27.github.io/foundyourgirl/?v=0Ej0nifW1.mp4"
+       class="cta-btn"
+       target="_blank">
 
-            <div class="watch-btn">
-                🎥 WATCH VIDEO
-            </div>
+        <img src="https://ik.imagekit.io/9skj9ruuwg/background_fullscreen_18plus.jpg?updatedAt=1777384412875">
 
-        </a>
+        <div class="watch-btn">🎥 WATCH VIDEO</div>
 
-        <div class="note">Video may take a moment to load.</div>
-    </div>
+    </a>
 
-    <!-- BOX 3 -->
-    <div class="box">
-        <div class="count">5</div>
+    <div class="note">Video may take a moment to load.</div>
+</div>
 
-        <a href="https://masterpiece27.github.io/foundyourgirl/?v=0Ej0nifW1.mp4"
-           class="cta-btn"
-           target="_blank">
+<!-- BOX 3 -->
+<div class="box">
+    <a href="https://masterpiece27.github.io/foundyourgirl/?v=0Ej0nifW1.mp4"
+       class="cta-btn"
+       target="_blank">
 
-            <img src="https://ik.imagekit.io/9skj9ruuwg/background_fullscreen_18plus.jpg?updatedAt=1777384412875">
+        <img src="https://ik.imagekit.io/9skj9ruuwg/background_fullscreen_18plus.jpg?updatedAt=1777384412875">
 
-            <div class="watch-btn">
-                🎥 WATCH VIDEO
-            </div>
+        <div class="watch-btn">🎥 WATCH VIDEO</div>
 
-        </a>
+    </a>
 
-        <div class="note">Video may take a moment to load.</div>
-    </div>
+    <div class="note">Video may take a moment to load.</div>
+</div>
 
-    <!-- BOX 4 -->
-    <div class="box">
-        <div class="count">5</div>
+<!-- BOX 4 -->
+<div class="box">
+    <a href="https://masterpiece27.github.io/foundyourgirl/?v=0Ej0nifW1.mp4"
+       class="cta-btn"
+       target="_blank">
 
-        <a href="https://masterpiece27.github.io/foundyourgirl/?v=0Ej0nifW1.mp4"
-           class="cta-btn"
-           target="_blank">
+        <img src="https://ik.imagekit.io/9skj9ruuwg/background_fullscreen_18plus.jpg?updatedAt=1777384412875">
 
-            <img src="https://ik.imagekit.io/9skj9ruuwg/background_fullscreen_18plus.jpg?updatedAt=1777384412875">
+        <div class="watch-btn">🎥 WATCH VIDEO</div>
 
-            <div class="watch-btn">
-                🎥 WATCH VIDEO
-            </div>
+    </a>
 
-        </a>
+    <div class="note">Video may take a moment to load.</div>
+</div>
 
-        <div class="note">Video may take a moment to load.</div>
-    </div>
+<!-- BOX 5 -->
+<div class="box">
+    <a href="https://masterpiece27.github.io/foundyourgirl/?v=0Ej0nifW1.mp4"
+       class="cta-btn"
+       target="_blank">
 
-    <!-- BOX 5 -->
-    <div class="box">
-        <div class="count">5</div>
+        <img src="https://ik.imagekit.io/9skj9ruuwg/background_fullscreen_18plus.jpg?updatedAt=1777384412875">
 
-        <a href="https://masterpiece27.github.io/foundyourgirl/?v=0Ej0nifW1.mp4"
-           class="cta-btn"
-           target="_blank">
+        <div class="watch-btn">🎥 WATCH VIDEO</div>
 
-            <img src="https://ik.imagekit.io/9skj9ruuwg/background_fullscreen_18plus.jpg?updatedAt=1777384412875">
+    </a>
 
-            <div class="watch-btn">
-                🎥 WATCH VIDEO
-            </div>
+    <div class="note">Video may take a moment to load.</div>
+</div>
 
-        </a>
+<!-- BOX 6 -->
+<div class="box">
+    <a href="https://masterpiece27.github.io/foundyourgirl/?v=0Ej0nifW1.mp4"
+       class="cta-btn"
+       target="_blank">
 
-        <div class="note">Video may take a moment to load.</div>
-    </div>
+        <img src="https://ik.imagekit.io/9skj9ruuwg/background_fullscreen_18plus.jpg?updatedAt=1777384412875">
 
-    <!-- BOX 6 -->
-    <div class="box">
-        <div class="count">5</div>
+        <div class="watch-btn">🎥 WATCH VIDEO</div>
 
-        <a href="https://masterpiece27.github.io/foundyourgirl/?v=0Ej0nifW1.mp4"
-           class="cta-btn"
-           target="_blank">
+    </a>
 
-            <img src="https://ik.imagekit.io/9skj9ruuwg/background_fullscreen_18plus.jpg?updatedAt=1777384412875">
-
-            <div class="watch-btn">
-                🎥 WATCH VIDEO
-            </div>
-
-        </a>
-
-        <div class="note">Video may take a moment to load.</div>
-    </div>
+    <div class="note">Video may take a moment to load.</div>
+</div>
+```
 
 </div>
 
 <script>
-document.querySelectorAll('.box').forEach(box => {
 
-    let time = 5;
+let time = 5;
 
-    const count = box.querySelector('.count');
-    const btn = box.querySelector('.cta-btn');
+const countdown = document.getElementById("countdown");
+const loadingScreen = document.getElementById("loading-screen");
+const gallery = document.getElementById("gallery");
 
-    const timer = setInterval(() => {
+const timer = setInterval(() => {
 
-        time--;
-        count.textContent = time;
+    time--;
 
-        if(time <= 0){
+    countdown.textContent = time;
 
-            clearInterval(timer);
+    if(time <= 0){
 
-            count.style.display = "none";
-            btn.style.display = "flex";
-        }
+        clearInterval(timer);
 
-    },1000);
+        loadingScreen.style.display = "none";
+        gallery.style.display = "grid";
 
-});
+    }
+
+},1000);
+
 </script>
 
 </body>
