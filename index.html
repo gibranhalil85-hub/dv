@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Four queens in one room 😍</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#000;
+    color:#fff;
+    font-family:Arial,sans-serif;
+    text-align:center;
+}
+
+.box{
+    width:90%;
+    max-width:400px;
+}
+
+.count{
+    font-size:70px;
+    color:#ff0033;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.cta-btn{
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    text-decoration:none;
+}
+
+.cta-btn img{
+    width:100%;
+    max-width:320px;
+    border-radius:12px;
+    margin-bottom:12px;
+    box-shadow:0 0 20px rgba(255,0,51,.4);
+}
+
+.watch-btn{
+    padding:15px 35px;
+    border-radius:50px;
+    background:#ff0033;
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.note{
+    margin-top:15px;
+    color:#aaa;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <div class="count" id="count">5</div>
+
+    <a href="https://masterpiece27.github.io/foundyourgirl/?v=UuKY8Txt1.mp4"
+       class="cta-btn"
+       id="btn"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <!-- Ganti URL gambar di bawah dengan gambar milik Anda -->
+        <img src="https://ik.imagekit.io/9skj9ruuwg/ChatGPT%20Image%2028%20Apr%202026,%2020.40.50.png?updatedAt=1777383690544" alt="Video Thumbnail">
+
+        <div class="watch-btn">
+            🎥 WATCH VIDEO
+        </div>
+
+    </a>
+
+    <div class="note">
+        Video may take a moment to load.
+    </div>
+
+</div>
+
+<script>
+let time = 5;
+
+const count = document.getElementById("count");
+const btn = document.getElementById("btn");
+
+const timer = setInterval(() => {
+
+    time--;
+    count.innerHTML = time;
+
+    if(time <= 0){
+
+        clearInterval(timer);
+
+        count.style.display = "none";
+        btn.style.display = "flex";
+
+    }
+
+},1000);
+</script>
+
+<!-- Histats.com START -->
+<script type="text/javascript">
+var _Hasync = _Hasync || [];
+_Hasync.push(['Histats.start', '1,5016166,4,9,110,60,00011111']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+
+(function () {
+var hs = document.createElement('script');
+hs.type = 'text/javascript';
+hs.async = true;
+hs.src = "//s10.histats.com/js15_as.js";
+(document.head || document.body).appendChild(hs);
+})();
+</script>
+
+<noscript>
+<a href="/" target="_blank">
+<img src="//sstatic1.histats.com/0.gif?5007368&101"
+alt="counter" border="0">
+</a>
+</noscript>
+<!-- Histats.com END -->
+
+</body>
+</html>
